@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 30%;
+            height: 300px;
+            background-color: #f1f1f1;
+            color: black;
+            border-radius: 12px 12px;
+           
+
+            border: 4px solid slateblue;
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        img{
+            width: 100%;
+            height: 200px;
+            border-radius: 12px 12px 0 0; }
+    </style>
+</head>
+<body>
+
+       <section>
+        {% for i in fun %}
+        <div>
+           <img src="{{i.img.url}}" alt="">
+            {{i.description | upper}}
+           <h1>author :  {{i.author}}</h1>
+        </div>
+          
+        {% endfor %}
+
+        {% for i in fun %}
+        <div>
+           <img src="{{i.img.url}}" alt="">
+            {{i.description}}
+           <h1>author :  {{i.author}}</h1>
+        </div>
+          
+        {% endfor %}
+        {% for i in fun %}
+        <div>
+           <img src="{{i.img.url}}" alt="">
+            {{i.description}}
+           <h1>author :  {{i.author}}</h1>
+        </div>
+          
+        {% endfor %}
+       </section>
+    
+
+
+
+</body>
+</html>
